@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin5">5sp</dimen>
+    <dimen name="margin10">10sp</dimen>
+    <dimen name="margin20">20sp</dimen>
+    <dimen name="margin30">30sp</dimen>
+    <dimen name="margin40">40sp</dimen>
+    <dimen name="hintSize">16sp</dimen>
+    <dimen name="editTextSize">18sp</dimen>
+    <dimen name="titleTextSize">22sp</dimen>
+    <dimen name="placeholder_image_height">200sp</dimen>
+    <dimen name="placeholder">10sp</dimen>
+</resources>

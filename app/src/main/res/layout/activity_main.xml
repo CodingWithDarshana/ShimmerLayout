@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:shimmer="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        shimmer:title="@string/app_name"
+        shimmer:titleTextColor="@color/colorWhite" />
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmerFrameLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        shimmer:duration="1000">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <include layout="@layout/placeholder_item" />
+
+            <include
+                layout="@layout/placeholder_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin5" />
+
+            <include layout="@layout/placeholder_item" />
+
+            <include layout="@layout/placeholder_item" />
+
+            <include layout="@layout/placeholder_item" />
+        </LinearLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/shimmerFrameLayout"
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rec_mostPopularVideos"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorGray"
+            android:visibility="gone" />
+
+       <include android:visibility="gone"  android:id="@+id/lnr_data_unavailable" layout="@layout/data_unavailable"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

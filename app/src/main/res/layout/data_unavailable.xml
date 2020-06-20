@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:background="@color/colorWhite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin10"
+        app:cardBackgroundColor="@android:color/white"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="4dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rec_mostPopularVideos"
+            android:padding="@dimen/margin10">
+
+            <ImageView
+                android:contentDescription="@string/app_name"
+                android:id="@+id/img_offline"
+                android:layout_width="50sp"
+                android:layout_height="50sp"
+                android:src="@drawable/ic_cloud_off_black_24dp"
+                android:tint="@color/colorAccent" />
+
+            <LinearLayout
+                android:id="@+id/lnr_offline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin20"
+                android:layout_toRightOf="@+id/img_offline"
+                android:orientation="vertical"
+                android:layout_toEndOf="@+id/img_offline"
+                android:layout_marginStart="@dimen/margin20">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/offline"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/titleTextSize"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/offline_desc"
+                    android:textSize="@dimen/editTextSize" />
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/txt_retry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lnr_offline"
+                android:gravity="end"
+                android:padding="@dimen/margin10"
+                android:text="@string/retry"
+                android:textAllCaps="true"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/hintSize"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

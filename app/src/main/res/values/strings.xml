@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Shimmer Layout</string>
+    <string name="offline">Offline</string>
+    <string name="offline_desc">Your network is unavailable. Check your data or wifi connection.</string>
+    <string name="retry">Retry</string>
+    <string name="placeholder">---------------</string>
+</resources>
